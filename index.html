@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Database</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="content-wrapper">
+    <div class="wrapper">
+        <div class="wrapper-logo">
+            <div class="logo">     
+                <div class="header">
+                    <a href="index.html"><img src="./res/logo.png" alt="logotype"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sökfältet -->
+        <div class="search-box">
+            <div class="search-element">
+                <h3 class="search-header">Sök film</h3>
+                    <input type="text" class="form-control" 
+
+                    placeholder="Sök..." id="movie-search-box" onkeyup="findMovies()">
+
+                    <div class="search-list" id="search-list">
+
+                    </div>
+            </div>
+        </div>
+
+    <!-- Trailer -->
+    <section>
+        <div class="wrapper-trailer">
+            <article class="movie-details" id="movieDetails">
+                <div class="movie-container" data-movie-container>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Top20 -->
+    <section>
+        <div class="wrapper-popular">
+            <h2 class="popular__title">My Movie Database Top 20</h2>
+            <section class="popular__card-container" id="popularCardContainer">
+                <article class="movie-details" id="movieList">
+                    
+                    </article>
+            </section>
+
+            
+        </div>
+    </section>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

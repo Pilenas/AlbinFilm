@@ -1,0 +1,285 @@
+/* Variables */
+:root {
+    --header-grey: #121212;
+    --primary-black: #000000;
+    --primary-white: #ffffff;
+    --primary-grey: #1A1A1A;
+    --text-yellow: #F5C518;
+    --text-blue: #5595E7;
+}
+
+/* Här skriver ni er CSS */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif, 'Times New Roman',
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.wrapper{
+    min-height: 100vh;
+    background-color: var(--primary-black);
+}
+
+.wrapper .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.wrapper-logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 25rem;;
+    padding: 1rem;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sökfältet */
+
+.search-box{
+    background-color: var(--primary-grey);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.search-element{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.search-element .search-header{
+    align-self: center;
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.search-element .form-control{
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    color: var(--primary-black);
+    width: 350px;
+}
+
+.search-list{
+    position:absolute;
+    right: 0;
+    top: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    z-index: 10;
+}
+
+.search-list .search-list-item{
+    background-color: var(--primary-grey);
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--primary-black);
+    width: calc(350px - 8px);
+    color: var(--primary-white);
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.search-list-item{
+    display: flex;
+    align-items: center;
+}
+
+.search-list .search-list-item:Hover{
+    background-color: var(--text-yellow) ;
+}
+
+.search-list-thumbnail img{
+    width: 35px;
+    margin-right: 1rem;
+}
+
+.search-item-info h3{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.search-item-info p{
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.result-container{
+    padding: 3rem;
+    margin-top: 5rem;
+    background-color: var(--primary-grey);
+    border-radius: 10px;
+
+}
+
+.hide-search-list{
+    display: none;
+}
+
+/* Det som laddas in när man trycker på ett sökresultat */
+
+.movie-poster img{
+    max-width: 300px;
+    margin: 0 auto;
+    border: 4px solid #ffffff;
+}
+
+.movie-info{
+    background-color: var(--primary-grey);
+    border-radius: 1rem;
+    text-align: center;
+    color: var(--primary-white);
+    padding: 1rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1%;
+}
+
+.movie-misc-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.movie-year{
+    padding-bottom: .5rem;
+}
+
+.movie-genre{
+    padding: .5rem;
+}
+
+.movie-writer{
+    padding: .5rem;
+}
+
+.movie-actors{
+    padding: .5rem;
+}
+
+.movie-plot{
+    padding: .5rem;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* trailers */
+
+.movie-trailer-iframe {
+    padding: 1rem;
+}
+
+/* Top20 */
+
+.popular__title {
+    color: var(--text-yellow);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.movie-item {
+    color: var(--primary-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    
+}
+
+.movie-ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.movie-title {
+    padding-bottom: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-img{
+    height: 30em;
+}
+li {
+    justify-content: space-around;
+    color:var(--primary-white);
+    padding-bottom: 2em;
+}
+
+.movie-detail > li {
+    color: var(--primary-white);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1380px) {
+}
+
+@media screen and (max-width: 1100px) {
+    
+    .movie-trailer-iframe {
+        margin-bottom: .5;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .movie-trailer-iframe {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: column;
+        margin-bottom: .5;
+    }
+
+    .movie-info{
+        background-color: var(--primary-grey);
+        border-radius: 1rem;
+        text-align: center;
+        color: var(--primary-white);
+        padding: 1rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 1%;
+    }
+
+}
